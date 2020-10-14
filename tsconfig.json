@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
         "module": "commonjs",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -17,8 +20,5 @@
     },
     "include": [
         "src/**/*"
-    ],
-    "exclude": [
-        "src/client"
     ]
 }
