@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "prebuild": "rm -rf dist/* && tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
+    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix",
+    "prebuild": "rm -rf dist/*",
+    "build": "npm run lint && tsc",
     "prestart": "npm run build",
     "start": "ts-node .",
     "dev": "ts-node-dev src/index.ts",
@@ -23,9 +24,12 @@
   "devDependencies": {
     "@types/express": "^4.17.8",
     "@types/node": "^14.11.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
     "ts-node": "^9.0.0",
     "ts-node-dev": "^1.0.0-pre.63",
-    "tslint": "^6.1.3",
     "typeorm": "^0.2.28",
     "typescript": "^4.0.3"
   }

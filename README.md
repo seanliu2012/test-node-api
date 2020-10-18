@@ -5,7 +5,9 @@
 ```bash
 npm init -y
 npm i express
-npm i -D typescript ts-node-dev tslint @types/node @types/express
+npm i -D typescript ts-node ts-node-dev @types/node @types/express
+npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm i -D eslint-config-prettier
 ```
 
 ## Run
